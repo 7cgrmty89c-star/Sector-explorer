@@ -195,22 +195,38 @@ if wybor == 8:
     print("- Sprzęt komputerowy")
     print("- Usługi IT")
 
-    print("\nNa co patrzeć w branży Oprogramowanie:")
+    print("\nJak zarabia branża Oprogramowanie:")
+    print("Firmy sprzedają dostęp do programów w modelu subskrypcyjnym -")
+    print("klienci płacą cyklicznie, zwykle co miesiąc lub co rok.")
+
+    print("\nCzynniki wpływające na zyski w branży Oprogramowanie:")
     print("- Tempo wzrostu przychodów z subskrypcji")
     print("- Wydatki firm na cyfryzację")
     print("- Konkurencja i tempo innowacji produktowej")
 
-    print("\nNa co patrzeć w branży Półprzewodniki:")
+    print("\nJak zarabia branża Półprzewodniki:")
+    print("Firmy projektują i produkują chipy, sprzedawane producentom")
+    print("sprzętu elektronicznego i centrów danych.")
+
+    print("\nCzynniki wpływające na zyski w branży Półprzewodniki:")
     print("- Cykl koniunkturalny w branży chipów")
     print("- Popyt na sprzęt AI i centra danych")
     print("- Zależność od kilku kluczowych producentów (np. Tajwan)")
 
-    print("\nNa co patrzeć w branży Sprzęt komputerowy:")
+    print("\nJak zarabia branża Sprzęt komputerowy:")
+    print("Firmy projektują i sprzedają fizyczne urządzenia - komputery,")
+    print("laptopy, telefony i akcesoria - konsumentom oraz firmom.")
+
+    print("\nCzynniki wpływające na zyski w branży Sprzęt komputerowy:")
     print("- Cykl wymiany urządzeń przez konsumentów i firmy")
     print("- Marże na sprzedaży sprzętu")
     print("- Konkurencja cenowa na rynku")
 
-    print("\nNa co patrzeć w branży Usługi IT:")
+    print("\nJak zarabia branża Usługi IT:")
+    print("Firmy wdrażają, utrzymują i doradzają przy systemach IT")
+    print("innym firmom, zwykle w ramach długoterminowych kontraktów.")
+
+    print("\nCzynniki wpływające na zyski w branży Usługi IT:")
     print("- Długoterminowe kontrakty z klientami korporacyjnymi")
     print("- Tempo przechodzenia firm do chmury")
     print("- Zapotrzebowanie na wdrożenia AI w firmach")
