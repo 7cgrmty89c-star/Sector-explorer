@@ -47,17 +47,29 @@ if wybor == 1:
     print("- Energetyka odnawialna")
     print("- Usługi wiertnicze")
 
-    print("\nNa co patrzeć w branży Ropa i gaz:")
+    print("\nJak zarabia branża Ropa i gaz:")
+    print("Firmy wydobywają ropę i gaz, przetwarzają je i sprzedają")
+    print("jako paliwa oraz surowce dla przemysłu chemicznego.")
+
+    print("\nCzynniki wpływające na zyski w branży Ropa i gaz:")
     print("- Ceny ropy naftowej na rynkach światowych")
     print("- Decyzje OPEC dotyczące wydobycia")
     print("- Koszty wydobycia i marże rafineryjne")
 
-    print("\nNa co patrzeć w branży Energetyka odnawialna:")
+    print("\nJak zarabia branża Energetyka odnawialna:")
+    print("Firmy budują i eksploatują farmy wiatrowe, słoneczne oraz")
+    print("inne instalacje, sprzedając wytworzoną energię elektryczną.")
+
+    print("\nCzynniki wpływające na zyski w branży Energetyka odnawialna:")
     print("- Dotacje i polityka rządowa wspierająca OZE")
     print("- Koszt technologii (panele, turbiny)")
     print("- Tempo inwestycji w nowe moce wytwórcze")
 
-    print("\nNa co patrzeć w branży Usługi wiertnicze:")
+    print("\nJak zarabia branża Usługi wiertnicze:")
+    print("Firmy świadczą usługi wiercenia i obsługi odwiertów dla")
+    print("koncernów wydobywczych, rozliczane za wykonane zlecenia.")
+
+    print("\nCzynniki wpływające na zyski w branży Usługi wiertnicze:")
     print("- Poziom inwestycji firm energetycznych w nowe odwierty")
     print("- Ceny surowców wpływające na opłacalność wydobycia")
     print("- Dostępność sprzętu i wykwalifikowanej kadry")
@@ -68,17 +80,29 @@ if wybor == 2:
     print("- Chemia")
     print("- Opakowania")
 
-    print("\nNa co patrzeć w branży Górnictwo i metale:")
+    print("\nJak zarabia branża Górnictwo i metale:")
+    print("Firmy wydobywają rudy metali i surowce mineralne, sprzedając")
+    print("je producentom przemysłowym na całym świecie.")
+
+    print("\nCzynniki wpływające na zyski w branży Górnictwo i metale:")
     print("- Ceny surowców (miedź, żelazo, złoto)")
     print("- Popyt z Chin i innych dużych gospodarek")
     print("- Koszty energii potrzebnej do produkcji")
 
-    print("\nNa co patrzeć w branży Chemia:")
+    print("\nJak zarabia branża Chemia:")
+    print("Firmy przetwarzają surowce w produkty chemiczne, sprzedawane")
+    print("do przemysłu, rolnictwa i produkcji dóbr konsumpcyjnych.")
+
+    print("\nCzynniki wpływające na zyski w branży Chemia:")
     print("- Ceny surowców ropopochodnych")
     print("- Popyt z przemysłu i rolnictwa")
     print("- Regulacje środowiskowe")
 
-    print("\nNa co patrzeć w branży Opakowania:")
+    print("\nJak zarabia branża Opakowania:")
+    print("Firmy produkują opakowania (plastikowe, papierowe, szklane)")
+    print("i sprzedają je producentom żywności, kosmetyków i innych dóbr.")
+
+    print("\nCzynniki wpływające na zyski w branży Opakowania:")
     print("- Popyt z sektora spożywczego i e-commerce")
     print("- Ceny surowca (tworzywa, papier)")
     print("- Trend na opakowania ekologiczne")
@@ -89,17 +113,29 @@ if wybor == 3:
     print("- Maszyny przemysłowe")
     print("- Transport i logistyka")
 
-    print("\nNa co patrzeć w branży Lotnictwo i obronność:")
+    print("\nJak zarabia branża Lotnictwo i obronność:")
+    print("Firmy produkują samoloty, sprzęt wojskowy i komponenty,")
+    print("sprzedając je rządom oraz liniom lotniczym.")
+
+    print("\nCzynniki wpływające na zyski w branży Lotnictwo i obronność:")
     print("- Zamówienia rządowe i budżety obronne")
     print("- Popyt na loty pasażerskie")
     print("- Długość i wartość zaległych zamówień (backlog)")
 
-    print("\nNa co patrzeć w branży Maszyny przemysłowe:")
+    print("\nJak zarabia branża Maszyny przemysłowe:")
+    print("Firmy produkują maszyny i urządzenia wykorzystywane przez")
+    print("inne firmy w produkcji i budownictwie.")
+
+    print("\nCzynniki wpływające na zyski w branży Maszyny przemysłowe:")
     print("- Poziom inwestycji firm w nowe fabryki")
     print("- Ceny stali i innych surowców")
     print("- Cykl koniunkturalny w gospodarce")
 
-    print("\nNa co patrzeć w branży Transport i logistyka:")
+    print("\nJak zarabia branża Transport i logistyka:")
+    print("Firmy przewożą towary drogą lądową, morską lub powietrzną,")
+    print("pobierając opłaty za transport i magazynowanie.")
+
+    print("\nCzynniki wpływające na zyski w branży Transport i logistyka:")
     print("- Ceny paliwa")
     print("- Wolumen handlu międzynarodowego")
     print("- Stawki frachtowe")
@@ -110,17 +146,29 @@ if wybor == 4:
     print("- Odzież i luksus")
     print("- Hotele i rozrywka")
 
-    print("\nNa co patrzeć w branży Motoryzacja:")
+    print("\nJak zarabia branża Motoryzacja:")
+    print("Firmy projektują, produkują i sprzedają samochody klientom")
+    print("indywidualnym oraz flotom firmowym.")
+
+    print("\nCzynniki wpływające na zyski w branży Motoryzacja:")
     print("- Stopy procentowe (wpływ na kredyty samochodowe)")
     print("- Ceny surowców (stal, chipy)")
     print("- Tempo przejścia na pojazdy elektryczne")
 
-    print("\nNa co patrzeć w branży Odzież i luksus:")
+    print("\nJak zarabia branża Odzież i luksus:")
+    print("Firmy projektują i sprzedają ubrania oraz dobra luksusowe,")
+    print("zarabiając na marży i sile rozpoznawalności marki.")
+
+    print("\nCzynniki wpływające na zyski w branży Odzież i luksus:")
     print("- Siła nabywcza konsumentów")
     print("- Trendy modowe i rozpoznawalność marki")
     print("- Koszty produkcji i łańcucha dostaw")
 
-    print("\nNa co patrzeć w branży Hotele i rozrywka:")
+    print("\nJak zarabia branża Hotele i rozrywka:")
+    print("Firmy prowadzą hotele, parki rozrywki i kina, zarabiając")
+    print("na opłatach za pobyt, bilety i usługi dodatkowe.")
+
+    print("\nCzynniki wpływające na zyski w branży Hotele i rozrywka:")
     print("- Poziom wydatków konsumentów na podróże")
     print("- Ceny paliwa lotniczego")
     print("- Sezonowość i wydarzenia globalne")
@@ -131,17 +179,29 @@ if wybor == 5:
     print("- Handel detaliczny")
     print("- Higiena i kosmetyki")
 
-    print("\nNa co patrzeć w branży Żywność i napoje:")
+    print("\nJak zarabia branża Żywność i napoje:")
+    print("Firmy produkują i sprzedają jedzenie oraz napoje, zarabiając")
+    print("na marży przy stałym, powtarzalnym popycie konsumentów.")
+
+    print("\nCzynniki wpływające na zyski w branży Żywność i napoje:")
     print("- Ceny surowców rolnych")
     print("- Siła marki i lojalność klientów")
     print("- Koszty transportu i dystrybucji")
 
-    print("\nNa co patrzeć w branży Handel detaliczny:")
+    print("\nJak zarabia branża Handel detaliczny:")
+    print("Firmy prowadzą sklepy (stacjonarne i internetowe), kupując")
+    print("towary hurtowo i sprzedając je z marżą klientom końcowym.")
+
+    print("\nCzynniki wpływające na zyski w branży Handel detaliczny:")
     print("- Wydatki konsumenckie i inflacja")
     print("- Konkurencja z e-commerce")
     print("- Marże i koszty logistyki")
 
-    print("\nNa co patrzeć w branży Higiena i kosmetyki:")
+    print("\nJak zarabia branża Higiena i kosmetyki:")
+    print("Firmy produkują kosmetyki i środki higieny, sprzedając je")
+    print("przez sklepy detaliczne oraz kanały internetowe.")
+
+    print("\nCzynniki wpływające na zyski w branży Higiena i kosmetyki:")
     print("- Siła marki premium vs marki własne sklepów")
     print("- Koszty surowców")
     print("- Trendy zakupowe konsumentów")
@@ -152,17 +212,29 @@ if wybor == 6:
     print("- Biotechnologia")
     print("- Ubezpieczenia zdrowotne")
 
-    print("\nNa co patrzeć w branży Firmy farmaceutyczne:")
+    print("\nJak zarabia branża Firmy farmaceutyczne:")
+    print("Firmy opracowują i sprzedają leki, chronione patentami,")
+    print("co pozwala im ustalać wysokie ceny przez czas ochrony patentowej.")
+
+    print("\nCzynniki wpływające na zyski w branży Firmy farmaceutyczne:")
     print("- Portfel patentów i data ich wygaśnięcia")
     print("- Wyniki badań klinicznych nowych leków")
     print("- Regulacje i decyzje agencji lekowych")
 
-    print("\nNa co patrzeć w branży Biotechnologia:")
+    print("\nJak zarabia branża Biotechnologia:")
+    print("Firmy prowadzą badania nad nowymi lekami i terapiami,")
+    print("zarabiając na sprzedaży licencji lub własnych produktów po zatwierdzeniu.")
+
+    print("\nCzynniki wpływające na zyski w branży Biotechnologia:")
     print("- Postęp badań klinicznych (fazy testów)")
     print("- Dostęp do finansowania (spółki często bez zysków)")
     print("- Ryzyko niepowodzenia badań")
 
-    print("\nNa co patrzeć w branży Ubezpieczenia zdrowotne:")
+    print("\nJak zarabia branża Ubezpieczenia zdrowotne:")
+    print("Firmy pobierają regularne składki od klientów, w zamian")
+    print("pokrywając koszty ich leczenia zgodnie z umową.")
+
+    print("\nCzynniki wpływające na zyski w branży Ubezpieczenia zdrowotne:")
     print("- Koszty świadczeń medycznych")
     print("- Regulacje rządowe dotyczące ochrony zdrowia")
     print("- Liczba ubezpieczonych klientów")
@@ -173,17 +245,29 @@ if wybor == 7:
     print("- Ubezpieczenia")
     print("- Zarządzanie inwestycjami")
 
-    print("\nNa co patrzeć w branży Banki:")
+    print("\nJak zarabia branża Banki:")
+    print("Banki pożyczają pieniądze klientom i firmom, zarabiając")
+    print("na różnicy między oprocentowaniem kredytów a depozytów.")
+
+    print("\nCzynniki wpływające na zyski w branży Banki:")
     print("- Poziom stóp procentowych")
     print("- Jakość portfela kredytowego (ryzyko niespłacanych kredytów)")
     print("- Popyt na kredyty w gospodarce")
 
-    print("\nNa co patrzeć w branży Ubezpieczenia:")
+    print("\nJak zarabia branża Ubezpieczenia:")
+    print("Firmy pobierają składki od klientów, inwestując je i wypłacając")
+    print("odszkodowania tylko w razie zajścia zdarzenia objętego umową.")
+
+    print("\nCzynniki wpływające na zyski w branży Ubezpieczenia:")
     print("- Częstotliwość i koszty wypłacanych odszkodowań")
     print("- Stopy procentowe (wpływ na zyski z inwestycji składek)")
     print("- Konkurencja cenowa na rynku")
 
-    print("\nNa co patrzeć w branży Zarządzanie inwestycjami:")
+    print("\nJak zarabia branża Zarządzanie inwestycjami:")
+    print("Firmy zarządzają pieniędzmi klientów (fundusze, emerytury),")
+    print("pobierając opłatę jako procent od wartości zarządzanych aktywów.")
+
+    print("\nCzynniki wpływające na zyski w branży Zarządzanie inwestycjami:")
     print("- Wartość aktywów pod zarządzaniem")
     print("- Nastroje inwestorów i poziom rynków")
     print("- Wysokość pobieranych opłat za zarządzanie")
@@ -237,17 +321,29 @@ if wybor == 9:
     print("- Media i rozrywka")
     print("- Platformy internetowe")
 
-    print("\nNa co patrzeć w branży Telekomunikacja:")
+    print("\nJak zarabia branża Telekomunikacja:")
+    print("Firmy budują sieci komórkowe i internetowe, pobierając")
+    print("regularne opłaty abonamentowe od klientów.")
+
+    print("\nCzynniki wpływające na zyski w branży Telekomunikacja:")
     print("- Koszty budowy infrastruktury (5G, światłowody)")
     print("- Liczba abonentów i ich rotacja")
     print("- Regulacje rynku telekomunikacyjnego")
 
-    print("\nNa co patrzeć w branży Media i rozrywka:")
+    print("\nJak zarabia branża Media i rozrywka:")
+    print("Firmy tworzą i dystrybuują treści (filmy, seriale, muzykę),")
+    print("zarabiając na subskrypcjach, reklamach lub sprzedaży biletów.")
+
+    print("\nCzynniki wpływające na zyski w branży Media i rozrywka:")
     print("- Liczba subskrybentów platform streamingowych")
     print("- Koszty produkcji treści")
     print("- Konkurencja o czas widza")
 
-    print("\nNa co patrzeć w branży Platformy internetowe:")
+    print("\nJak zarabia branża Platformy internetowe:")
+    print("Firmy udostępniają serwisy internetowe za darmo, zarabiając")
+    print("głównie na sprzedaży reklam dopasowanych do użytkowników.")
+
+    print("\nCzynniki wpływające na zyski w branży Platformy internetowe:")
     print("- Liczba aktywnych użytkowników")
     print("- Przychody z reklam")
     print("- Regulacje dotyczące danych i prywatności")
@@ -258,17 +354,29 @@ if wybor == 10:
     print("- Gazownictwo")
     print("- Wodociągi")
 
-    print("\nNa co patrzeć w branży Energetyka (dostawcy prądu):")
+    print("\nJak zarabia branża Energetyka (dostawcy prądu):")
+    print("Firmy wytwarzają i dostarczają prąd do domów i firm,")
+    print("pobierając regularne opłaty za zużytą energię.")
+
+    print("\nCzynniki wpływające na zyski w branży Energetyka (dostawcy prądu):")
     print("- Regulacje cen energii przez państwo")
     print("- Koszty inwestycji w infrastrukturę")
     print("- Poziom stóp procentowych (wysokie zadłużenie branży)")
 
-    print("\nNa co patrzeć w branży Gazownictwo:")
+    print("\nJak zarabia branża Gazownictwo:")
+    print("Firmy dostarczają gaz ziemny do domów i firm, pobierając")
+    print("opłaty za zużycie oraz stałą opłatę przesyłową.")
+
+    print("\nCzynniki wpływające na zyski w branży Gazownictwo:")
     print("- Ceny gazu na rynkach hurtowych")
     print("- Regulacje dotyczące emisji i transformacji energetycznej")
     print("- Stabilność dostaw")
 
-    print("\nNa co patrzeć w branży Wodociągi:")
+    print("\nJak zarabia branża Wodociągi:")
+    print("Firmy dostarczają wodę pitną i odprowadzają ścieki,")
+    print("pobierając regularne opłaty od mieszkańców i firm.")
+
+    print("\nCzynniki wpływające na zyski w branży Wodociągi:")
     print("- Regulacje cen wody przez samorządy")
     print("- Koszty utrzymania infrastruktury")
     print("- Stabilność przychodów (niska zmienność popytu)")
@@ -279,17 +387,29 @@ if wybor == 11:
     print("- Nieruchomości komercyjne")
     print("- Fundusze REIT")
 
-    print("\nNa co patrzeć w branży Nieruchomości mieszkaniowe:")
+    print("\nJak zarabia branża Nieruchomości mieszkaniowe:")
+    print("Firmy budują i sprzedają lub wynajmują mieszkania i domy,")
+    print("zarabiając na sprzedaży lub regularnym czynszu.")
+
+    print("\nCzynniki wpływające na zyski w branży Nieruchomości mieszkaniowe:")
     print("- Poziom stóp procentowych (koszt kredytów hipotecznych)")
     print("- Podaż i popyt na mieszkania w danym regionie")
     print("- Ceny materiałów budowlanych")
 
-    print("\nNa co patrzeć w branży Nieruchomości komercyjne:")
+    print("\nJak zarabia branża Nieruchomości komercyjne:")
+    print("Firmy budują i wynajmują biurowce, centra handlowe i magazyny,")
+    print("zarabiając na czynszach od firm-najemców.")
+
+    print("\nCzynniki wpływające na zyski w branży Nieruchomości komercyjne:")
     print("- Poziom pustostanów w biurowcach i centrach handlowych")
     print("- Kondycja gospodarki i firm najemców")
     print("- Trend pracy zdalnej wpływający na popyt na biura")
 
-    print("\nNa co patrzeć w branży Fundusze REIT:")
+    print("\nJak zarabia branża Fundusze REIT:")
+    print("Fundusze posiadają portfele nieruchomości i wypłacają")
+    print("inwestorom większość zysku z czynszów w formie dywidendy.")
+
+    print("\nCzynniki wpływające na zyski w branży Fundusze REIT:")
     print("- Poziom wypłacanych dywidend")
     print("- Wartość posiadanych nieruchomości")
     print("- Wrażliwość na zmiany stóp procentowych")
