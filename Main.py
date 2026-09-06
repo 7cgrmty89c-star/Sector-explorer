@@ -6,7 +6,15 @@ def sektor_energia():
                 "Ceny ropy naftowej na rynkach światowych",
                 "Decyzje OPEC dotyczące wydobycia",
                 "Koszty wydobycia i marże rafineryjne"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "ExxonMobil",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Sprawozdania finansowe od lat audytuje niezależna firma PricewaterhouseCoopers (PwC)",
+                    "Jeden z największych koncernów naftowych na świecie, działający nieprzerwanie od ponad stu lat"
+                ]
+            }
         },
         "Energetyka odnawialna": {
             "jak_zarabia": "Firmy budują i eksploatują farmy wiatrowe, słoneczne oraz inne instalacje, sprzedając wytworzoną energię elektryczną.",
@@ -14,7 +22,15 @@ def sektor_energia():
                 "Dotacje i polityka rządowa wspierająca OZE",
                 "Koszt technologii (panele, turbiny)",
                 "Tempo inwestycji w nowe moce wytwórcze"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Ørsted",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie w Kopenhadze (Nasdaq Copenhagen), a jej głównym akcjonariuszem jest państwo duńskie",
+                    "Sprawozdania finansowe audytuje niezależna firma PricewaterhouseCoopers (PwC)",
+                    "Przeszła jawną, dobrze udokumentowaną transformację z paliw kopalnych (dawniej DONG Energy) w światowego lidera morskiej energetyki wiatrowej"
+                ]
+            }
         },
         "Usługi wiertnicze": {
             "jak_zarabia": "Firmy świadczą usługi wiercenia i obsługi odwiertów dla koncernów wydobywczych, rozliczane za wykonane zlecenia.",
@@ -22,7 +38,15 @@ def sektor_energia():
                 "Poziom inwestycji firm energetycznych w nowe odwierty",
                 "Ceny surowców wpływające na opłacalność wydobycia",
                 "Dostępność sprzętu i wykwalifikowanej kadry"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "SLB (dawniej Schlumberger)",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) od 1962 roku",
+                    "Sprawozdania finansowe audytuje niezależna firma PricewaterhouseCoopers (PwC)",
+                    "Działa nieprzerwanie od 1926 roku i jest największą na świecie firmą usług dla przemysłu naftowego pod względem udziału w rynku"
+                ]
+            }
         }
     }
 
@@ -37,6 +61,11 @@ def sektor_energia():
         print(f"Czynniki wpływające na zyski w branży {branza}:")
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
+        print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
         print()
 
 
