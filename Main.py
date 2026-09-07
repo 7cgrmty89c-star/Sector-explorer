@@ -77,7 +77,15 @@ def sektor_materialy():
                 "Ceny surowców (miedź, żelazo, złoto)",
                 "Popyt z Chin i innych dużych gospodarek",
                 "Koszty energii potrzebnej do produkcji"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Rio Tinto",
+                "wiarygodnosc": [
+                    "Notowana jednocześnie na giełdzie w Londynie (LSE) i w Sydney (ASX) w ramach struktury dual-listed",
+                    "Sprawozdania finansowe audytuje niezależna firma PricewaterhouseCoopers (PwC) nieprzerwanie od lat 50. XX wieku",
+                    "Jedna z największych firm górniczych na świecie, działająca w obecnej strukturze od 1995 roku"
+                ]
+            }
         },
         "Chemia": {
             "jak_zarabia": "Firmy przetwarzają surowce w produkty chemiczne, sprzedawane do przemysłu, rolnictwa i produkcji dóbr konsumpcyjnych.",
@@ -85,7 +93,15 @@ def sektor_materialy():
                 "Ceny surowców ropopochodnych",
                 "Popyt z przemysłu i rolnictwa",
                 "Regulacje środowiskowe"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "BASF",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie we Frankfurcie, wchodzi w skład niemieckiego indeksu DAX",
+                    "Sprawozdania finansowe audytuje niezależna firma Deloitte",
+                    "Jeden z największych na świecie koncernów chemicznych, działający od 1865 roku"
+                ]
+            }
         },
         "Opakowania": {
             "jak_zarabia": "Firmy produkują opakowania (plastikowe, papierowe, szklane) i sprzedają je producentom żywności, kosmetyków i innych dóbr.",
@@ -93,7 +109,15 @@ def sektor_materialy():
                 "Popyt z sektora spożywczego i e-commerce",
                 "Ceny surowca (tworzywa, papier)",
                 "Trend na opakowania ekologiczne"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "International Paper",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu S&P 500",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Jedna z największych na świecie firm produkujących opakowania i papier, działająca od 1898 roku"
+                ]
+            }
         }
     }
 
@@ -109,6 +133,11 @@ def sektor_materialy():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_przemysl():
@@ -119,7 +148,15 @@ def sektor_przemysl():
                 "Zamówienia rządowe i budżety obronne",
                 "Popyt na loty pasażerskie",
                 "Długość i wartość zaległych zamówień (backlog)"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Boeing",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa nieprzerwanie od 1916 roku, jeden z dwóch największych na świecie producentów samolotów pasażerskich"
+                ]
+            }
         },
         "Maszyny przemysłowe": {
             "jak_zarabia": "Firmy produkują maszyny i urządzenia wykorzystywane przez inne firmy w produkcji i budownictwie.",
@@ -127,7 +164,15 @@ def sektor_przemysl():
                 "Poziom inwestycji firm w nowe fabryki",
                 "Ceny stali i innych surowców",
                 "Cykl koniunkturalny w gospodarce"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Caterpillar",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa od 1925 roku, jeden z największych na świecie producentów maszyn budowlanych i górniczych"
+                ]
+            }
         },
         "Transport i logistyka": {
             "jak_zarabia": "Firmy przewożą towary drogą lądową, morską lub powietrzną, pobierając opłaty za transport i magazynowanie.",
@@ -135,7 +180,15 @@ def sektor_przemysl():
                 "Ceny paliwa",
                 "Wolumen handlu międzynarodowego",
                 "Stawki frachtowe"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "FedEx",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu S&P 500",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa od 1971 roku, jedna z największych firm logistycznych na świecie"
+                ]
+            }
         }
     }
 
@@ -151,6 +204,11 @@ def sektor_przemysl():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_dobra_uznaniowe():
@@ -161,7 +219,15 @@ def sektor_dobra_uznaniowe():
                 "Stopy procentowe (wpływ na kredyty samochodowe)",
                 "Ceny surowców (stal, chipy)",
                 "Tempo przejścia na pojazdy elektryczne"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Toyota",
+                "wiarygodnosc": [
+                    "Notowana przede wszystkim na Tokijskiej Giełdzie Papierów Wartościowych, a jej akcje depozytowe (ADR) są notowane na NYSE od 1999 roku",
+                    "Jako zagraniczny emitent podlega również amerykańskim wymogom sprawozdawczym wobec SEC",
+                    "Działa od 1937 roku i jest jednym z największych na świecie producentów samochodów pod względem liczby sprzedawanych pojazdów"
+                ]
+            }
         },
         "Odzież i luksus": {
             "jak_zarabia": "Firmy projektują i sprzedają ubrania oraz dobra luksusowe, zarabiając na marży i sile rozpoznawalności marki.",
@@ -169,7 +235,15 @@ def sektor_dobra_uznaniowe():
                 "Siła nabywcza konsumentów",
                 "Trendy modowe i rozpoznawalność marki",
                 "Koszty produkcji i łańcucha dostaw"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "LVMH",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie Euronext Paris i wchodzi w skład indeksu CAC 40",
+                    "Publikuje sprawozdania finansowe zgodnie z europejskimi standardami rachunkowości (IFRS)",
+                    "Największy na świecie koncern dóbr luksusowych, powstały w 1987 roku z połączenia Louis Vuitton i Moët Hennessy"
+                ]
+            }
         },
         "Hotele i rozrywka": {
             "jak_zarabia": "Firmy prowadzą hotele, parki rozrywki i kina, zarabiając na opłatach za pobyt, bilety i usługi dodatkowe.",
@@ -177,7 +251,15 @@ def sektor_dobra_uznaniowe():
                 "Poziom wydatków konsumentów na podróże",
                 "Ceny paliwa lotniczego",
                 "Sezonowość i wydarzenia globalne"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Marriott International",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie Nasdaq",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa od 1927 roku i jest największą na świecie siecią hotelową pod względem liczby pokoi"
+                ]
+            }
         }
     }
 
@@ -193,6 +275,11 @@ def sektor_dobra_uznaniowe():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_dobra_podstawowe():
@@ -203,7 +290,15 @@ def sektor_dobra_podstawowe():
                 "Ceny surowców rolnych",
                 "Siła marki i lojalność klientów",
                 "Koszty transportu i dystrybucji"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Coca-Cola",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa nieprzerwanie od 1892 roku i jest jedną z najbardziej rozpoznawalnych marek na świecie"
+                ]
+            }
         },
         "Handel detaliczny": {
             "jak_zarabia": "Firmy prowadzą sklepy (stacjonarne i internetowe), kupując towary hurtowo i sprzedając je z marżą klientom końcowym.",
@@ -211,7 +306,15 @@ def sektor_dobra_podstawowe():
                 "Wydatki konsumenckie i inflacja",
                 "Konkurencja z e-commerce",
                 "Marże i koszty logistyki"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Walmart",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa od 1962 roku i jest największą na świecie siecią handlu detalicznego pod względem przychodów"
+                ]
+            }
         },
         "Higiena i kosmetyki": {
             "jak_zarabia": "Firmy produkują kosmetyki i środki higieny, sprzedając je przez sklepy detaliczne oraz kanały internetowe.",
@@ -219,7 +322,15 @@ def sektor_dobra_podstawowe():
                 "Siła marki premium vs marki własne sklepów",
                 "Koszty surowców",
                 "Trendy zakupowe konsumentów"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Procter & Gamble",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa nieprzerwanie od 1837 roku, właściciel wielu globalnych marek (Gillette, Pampers, Head & Shoulders)"
+                ]
+            }
         }
     }
 
@@ -235,6 +346,11 @@ def sektor_dobra_podstawowe():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_zdrowie():
@@ -245,7 +361,15 @@ def sektor_zdrowie():
                 "Portfel patentów i data ich wygaśnięcia",
                 "Wyniki badań klinicznych nowych leków",
                 "Regulacje i decyzje agencji lekowych"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Pfizer",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do SEC i podlega nadzorowi amerykańskiej agencji leków (FDA)",
+                    "Działa nieprzerwanie od 1849 roku, jeden z największych koncernów farmaceutycznych na świecie"
+                ]
+            }
         },
         "Biotechnologia": {
             "jak_zarabia": "Firmy prowadzą badania nad nowymi lekami i terapiami, zarabiając na sprzedaży licencji lub własnych produktów po zatwierdzeniu.",
@@ -253,7 +377,15 @@ def sektor_zdrowie():
                 "Postęp badań klinicznych (fazy testów)",
                 "Dostęp do finansowania (spółki często bez zysków)",
                 "Ryzyko niepowodzenia badań"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Moderna",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie Nasdaq",
+                    "Regularnie składa raporty do SEC i podlega nadzorowi amerykańskiej agencji leków (FDA)",
+                    "Jedna z pierwszych na świecie firm, które wprowadziły technologię mRNA do masowej produkcji szczepionek"
+                ]
+            }
         },
         "Ubezpieczenia zdrowotne": {
             "jak_zarabia": "Firmy pobierają regularne składki od klientów, w zamian pokrywając koszty ich leczenia zgodnie z umową.",
@@ -261,7 +393,15 @@ def sektor_zdrowie():
                 "Koszty świadczeń medycznych",
                 "Regulacje rządowe dotyczące ochrony zdrowia",
                 "Liczba ubezpieczonych klientów"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "UnitedHealth Group",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Największy na świecie ubezpieczyciel zdrowotny pod względem przychodów"
+                ]
+            }
         }
     }
 
@@ -277,6 +417,11 @@ def sektor_zdrowie():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_finanse():
@@ -287,7 +432,15 @@ def sektor_finanse():
                 "Poziom stóp procentowych",
                 "Jakość portfela kredytowego (ryzyko niespłacanych kredytów)",
                 "Popyt na kredyty w gospodarce"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "JPMorgan Chase",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC) i podlega nadzorowi Rezerwy Federalnej",
+                    "Największy bank w USA pod względem wartości aktywów"
+                ]
+            }
         },
         "Ubezpieczenia": {
             "jak_zarabia": "Firmy pobierają składki od klientów, inwestując je i wypłacając odszkodowania tylko w razie zajścia zdarzenia objętego umową.",
@@ -295,7 +448,15 @@ def sektor_finanse():
                 "Częstotliwość i koszty wypłacanych odszkodowań",
                 "Stopy procentowe (wpływ na zyski z inwestycji składek)",
                 "Konkurencja cenowa na rynku"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Allianz",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie we Frankfurcie i wchodzi w skład niemieckiego indeksu DAX",
+                    "Podlega niemieckiemu i europejskiemu nadzorowi finansowemu",
+                    "Jeden z największych ubezpieczycieli na świecie, działający od 1890 roku"
+                ]
+            }
         },
         "Zarządzanie inwestycjami": {
             "jak_zarabia": "Firmy zarządzają pieniędzmi klientów (fundusze, emerytury), pobierając opłatę jako procent od wartości zarządzanych aktywów.",
@@ -303,7 +464,15 @@ def sektor_finanse():
                 "Wartość aktywów pod zarządzaniem",
                 "Nastroje inwestorów i poziom rynków",
                 "Wysokość pobieranych opłat za zarządzanie"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "BlackRock",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Największa na świecie firma zarządzająca aktywami pod względem wartości aktywów pod zarządzaniem (AUM)"
+                ]
+            }
         }
     }
 
@@ -319,6 +488,11 @@ def sektor_finanse():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_technologia():
@@ -329,7 +503,15 @@ def sektor_technologia():
                 "Tempo wzrostu przychodów z subskrypcji",
                 "Wydatki firm na cyfryzację",
                 "Konkurencja i tempo innowacji produktowej"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Microsoft",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie Nasdaq i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa nieprzerwanie od 1975 roku i jest jedną z najbardziej wartościowych spółek na świecie"
+                ]
+            }
         },
         "Półprzewodniki": {
             "jak_zarabia": "Firmy projektują i produkują chipy, sprzedawane producentom sprzętu elektronicznego i centrów danych.",
@@ -337,7 +519,15 @@ def sektor_technologia():
                 "Cykl koniunkturalny w branży chipów",
                 "Popyt na sprzęt AI i centra danych",
                 "Zależność od kilku kluczowych producentów (np. Tajwan)"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "NVIDIA",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie Nasdaq",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Lider światowego rynku układów graficznych oraz sprzętu do sztucznej inteligencji"
+                ]
+            }
         },
         "Sprzęt komputerowy": {
             "jak_zarabia": "Firmy projektują i sprzedają fizyczne urządzenia – komputery, laptopy, telefony i akcesoria – konsumentom oraz firmom.",
@@ -345,7 +535,15 @@ def sektor_technologia():
                 "Cykl wymiany urządzeń przez konsumentów i firmy",
                 "Marże na sprzedaży sprzętu",
                 "Konkurencja cenowa na rynku"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Apple",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie Nasdaq i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa nieprzerwanie od 1976 roku i jest jedną z najbardziej wartościowych spółek na świecie"
+                ]
+            }
         },
         "Usługi IT": {
             "jak_zarabia": "Firmy wdrażają, utrzymują i doradzają przy systemach IT innym firmom, zwykle w ramach długoterminowych kontraktów.",
@@ -353,7 +551,15 @@ def sektor_technologia():
                 "Długoterminowe kontrakty z klientami korporacyjnymi",
                 "Tempo przechodzenia firm do chmury",
                 "Zapotrzebowanie na wdrożenia AI w firmach"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Accenture",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Jedna z największych na świecie firm doradczo-technologicznych, obecna w ponad 120 krajach"
+                ]
+            }
         }
     }
 
@@ -369,6 +575,11 @@ def sektor_technologia():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_komunikacja():
@@ -379,7 +590,15 @@ def sektor_komunikacja():
                 "Koszty budowy infrastruktury (5G, światłowody)",
                 "Liczba abonentów i ich rotacja",
                 "Regulacje rynku telekomunikacyjnego"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Verizon",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Jeden z największych operatorów telekomunikacyjnych w USA"
+                ]
+            }
         },
         "Media i rozrywka": {
             "jak_zarabia": "Firmy tworzą i dystrybuują treści (filmy, seriale, muzykę), zarabiając na subskrypcjach, reklamach lub sprzedaży biletów.",
@@ -387,7 +606,15 @@ def sektor_komunikacja():
                 "Liczba subskrybentów platform streamingowych",
                 "Koszty produkcji treści",
                 "Konkurencja o czas widza"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Walt Disney Company",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Działa nieprzerwanie od 1923 roku i jest jednym z najbardziej rozpoznawalnych koncernów medialnych na świecie"
+                ]
+            }
         },
         "Platformy internetowe": {
             "jak_zarabia": "Firmy udostępniają serwisy internetowe za darmo, zarabiając głównie na sprzedaży reklam dopasowanych do użytkowników.",
@@ -395,7 +622,15 @@ def sektor_komunikacja():
                 "Liczba aktywnych użytkowników",
                 "Przychody z reklam",
                 "Regulacje dotyczące danych i prywatności"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Alphabet (Google)",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie Nasdaq",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Właściciel największej na świecie wyszukiwarki internetowej, działający od 1998 roku (jako Google, od 2015 roku pod nazwą Alphabet)"
+                ]
+            }
         }
     }
 
@@ -411,6 +646,11 @@ def sektor_komunikacja():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_uslugi_komunalne():
@@ -421,7 +661,15 @@ def sektor_uslugi_komunalne():
                 "Regulacje cen energii przez państwo",
                 "Koszty inwestycji w infrastrukturę",
                 "Poziom stóp procentowych (wysokie zadłużenie branży)"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "NextEra Energy",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Największy na świecie producent energii wiatrowej i słonecznej wśród firm użyteczności publicznej"
+                ]
+            }
         },
         "Gazownictwo": {
             "jak_zarabia": "Firmy dostarczają gaz ziemny do domów i firm, pobierając opłaty za zużycie oraz stałą opłatę przesyłową.",
@@ -429,7 +677,15 @@ def sektor_uslugi_komunalne():
                 "Ceny gazu na rynkach hurtowych",
                 "Regulacje dotyczące emisji i transformacji energetycznej",
                 "Stabilność dostaw"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Sempra",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Jedna z największych firm energetycznych w USA, obsługująca miliony klientów w Kalifornii i Teksasie"
+                ]
+            }
         },
         "Wodociągi": {
             "jak_zarabia": "Firmy dostarczają wodę pitną i odprowadzają ścieki, pobierając regularne opłaty od mieszkańców i firm.",
@@ -437,7 +693,15 @@ def sektor_uslugi_komunalne():
                 "Regulacje cen wody przez samorządy",
                 "Koszty utrzymania infrastruktury",
                 "Stabilność przychodów (niska zmienność popytu)"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "American Water Works",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Największa notowana publicznie firma wodociągowa w USA, obsługująca miliony klientów"
+                ]
+            }
         }
     }
 
@@ -453,6 +717,11 @@ def sektor_uslugi_komunalne():
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
         print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
 
 
 def sektor_nieruchomosci():
@@ -463,7 +732,15 @@ def sektor_nieruchomosci():
                 "Poziom stóp procentowych (koszt kredytów hipotecznych)",
                 "Podaż i popyt na mieszkania w danym regionie",
                 "Ceny materiałów budowlanych"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Lennar Corporation",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Jeden z największych deweloperów mieszkaniowych w USA, działający od 1954 roku"
+                ]
+            }
         },
         "Nieruchomości komercyjne": {
             "jak_zarabia": "Firmy budują i wynajmują biurowce, centra handlowe i magazyny, zarabiając na czynszach od firm-najemców.",
@@ -471,7 +748,15 @@ def sektor_nieruchomosci():
                 "Poziom pustostanów w biurowcach i centrach handlowych",
                 "Kondycja gospodarki i firm najemców",
                 "Trend pracy zdalnej wpływający na popyt na biura"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Simon Property Group",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Największy w USA właściciel centrów handlowych, działający jako fundusz inwestycyjny typu REIT"
+                ]
+            }
         },
         "Fundusze REIT": {
             "jak_zarabia": "Fundusze posiadają portfele nieruchomości i wypłacają inwestorom większość zysku z czynszów w formie dywidendy.",
@@ -479,7 +764,15 @@ def sektor_nieruchomosci():
                 "Poziom wypłacanych dywidend",
                 "Wartość posiadanych nieruchomości",
                 "Wrażliwość na zmiany stóp procentowych"
-            ]
+            ],
+            "spolka_przykladowa": {
+                "nazwa": "Prologis",
+                "wiarygodnosc": [
+                    "Notowana na giełdzie nowojorskiej (NYSE)",
+                    "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
+                    "Największy na świecie właściciel magazynów i centrów logistycznych, działający jako fundusz inwestycyjny typu REIT"
+                ]
+            }
         }
     }
 
@@ -494,6 +787,11 @@ def sektor_nieruchomosci():
         print(f"Czynniki wpływające na zyski w branży {branza}:")
         for czynnik in info['czynniki']:
             print(f"- {czynnik}")
+        print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
         print()
 
 
