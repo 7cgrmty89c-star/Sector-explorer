@@ -1,3 +1,27 @@
+def wyswietl_sektor(dane, nazwa_sektora):
+    print(f"\nBranże w sektorze {nazwa_sektora}:")
+    for branza in dane:
+        print(f"- {branza}")
+    print()
+
+    for branza, info in dane.items():
+        print(f"Jak zarabia branża {branza}:")
+        print(f"{info['jak_zarabia']}\n")
+        print(f"Czynniki wpływające na zyski w branży {branza}:")
+        for czynnik in info['czynniki']:
+            print(f"- {czynnik}")
+        print()
+        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
+        print("Czynniki wiarygodności tej spółki:")
+        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
+            print(f"- {punkt}")
+        print()
+        print("Na co zwrócić uwagę przy wycenie tej spółki:")
+        for wskaznik in info['spolka_przykladowa']['wycena']['wskazniki']:
+            print(f"- {wskaznik}")
+        print(f"\n{info['spolka_przykladowa']['wycena']['kontekst']}\n")
+
+
 def sektor_energia():
     dane_energii = {
         "Ropa i gaz": {
@@ -13,7 +37,11 @@ def sektor_energia():
                     "Notowana na giełdzie nowojorskiej (NYSE) i regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Sprawozdania finansowe od lat audytuje niezależna firma PricewaterhouseCoopers (PwC)",
                     "Jeden z największych koncernów naftowych na świecie, działający nieprzerwanie od ponad stu lat"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Spółki naftowe i gazowe zwykle notowane są z niższym P/E niż rynek, ze względu na cykliczność zysków powiązaną z wahaniami cen ropy. Często wypłacają wysokie dywidendy, bo mają ograniczone możliwości reinwestowania zysków w nowy wzrost."
+                }
             }
         },
         "Energetyka odnawialna": {
@@ -29,7 +57,11 @@ def sektor_energia():
                     "Notowana na giełdzie w Kopenhadze (Nasdaq Copenhagen), a jej głównym akcjonariuszem jest państwo duńskie",
                     "Sprawozdania finansowe audytuje niezależna firma PricewaterhouseCoopers (PwC)",
                     "Przeszła jawną, dobrze udokumentowaną transformację z paliw kopalnych (dawniej DONG Energy) w światowego lidera morskiej energetyki wiatrowej"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Spółki z energetyki odnawialnej często wyceniane są z wyższym P/E niż tradycyjne firmy energetyczne, bo inwestorzy płacą za oczekiwany przyszły wzrost mocy wytwórczych. Wskaźnik EV/EBITDA bywa tu bardziej użyteczny niż P/E, bo te firmy mają zwykle wysokie nakłady inwestycyjne i niższe bieżące zyski."
+                }
             }
         },
         "Usługi wiertnicze": {
@@ -45,28 +77,15 @@ def sektor_energia():
                     "Notowana na giełdzie nowojorskiej (NYSE) od 1962 roku",
                     "Sprawozdania finansowe audytuje niezależna firma PricewaterhouseCoopers (PwC)",
                     "Działa nieprzerwanie od 1926 roku i jest największą na świecie firmą usług dla przemysłu naftowego pod względem udziału w rynku"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Spółki usługowe dla przemysłu naftowego są silnie cykliczne - ich zyski (a więc i P/E) mocno rosną i spadają wraz z poziomem inwestycji koncernów wydobywczych. Warto patrzeć na kilka lat wstecz, nie tylko na jeden rok, żeby ocenić prawdziwy poziom wyceny."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Energia:")
-    for branza in dane_energii:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_energii.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_energii, "Energia")
 
 
 def sektor_materialy():
@@ -84,7 +103,11 @@ def sektor_materialy():
                     "Notowana jednocześnie na giełdzie w Londynie (LSE) i w Sydney (ASX) w ramach struktury dual-listed",
                     "Sprawozdania finansowe audytuje niezależna firma PricewaterhouseCoopers (PwC) nieprzerwanie od lat 50. XX wieku",
                     "Jedna z największych firm górniczych na świecie, działająca w obecnej strukturze od 1995 roku"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Spółki górnicze są silnie cykliczne - ich zyski rosną i spadają wraz z cenami surowców, więc niskie P/E na szczycie cyklu może mylnie sugerować okazję, zamiast szczytu zysków. EV/EBITDA lepiej odzwierciedla wartość, bo uwzględnia dług, który w tej branży bywa wysoki."
+                }
             }
         },
         "Chemia": {
@@ -100,7 +123,11 @@ def sektor_materialy():
                     "Notowana na giełdzie we Frankfurcie, wchodzi w skład niemieckiego indeksu DAX",
                     "Sprawozdania finansowe audytuje niezależna firma Deloitte",
                     "Jeden z największych na świecie koncernów chemicznych, działający od 1865 roku"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Duże koncerny chemiczne wyceniane są zwykle podobnie do przemysłu ciężkiego - umiarkowane P/E i stabilna dywidenda, ale silna wrażliwość na ceny energii i surowców mocno wpływa na marże, a tym samym na wycenę."
+                }
             }
         },
         "Opakowania": {
@@ -116,28 +143,15 @@ def sektor_materialy():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu S&P 500",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Jedna z największych na świecie firm produkujących opakowania i papier, działająca od 1898 roku"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Branża opakowaniowa to zwykle stabilny, dojrzały biznes - niskie tempo wzrostu, ale przewidywalne przepływy pieniężne, stąd umiarkowane P/E i regularne dywidendy, podobnie jak w dobrach podstawowych."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Materiały:")
-    for branza in dane_materialy:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_materialy.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_materialy, "Materiały")
 
 
 def sektor_przemysl():
@@ -155,7 +169,11 @@ def sektor_przemysl():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa nieprzerwanie od 1916 roku, jeden z dwóch największych na świecie producentów samolotów pasażerskich"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Ta branża bywa trudna do wyceny zwykłym P/E, bo zyski potrafią być mocno zaburzone przez jednorazowe problemy produkcyjne czy opóźnienia kontraktów. Warto patrzeć na wartość zaległych zamówień (backlog) jako uzupełnienie klasycznych wskaźników."
+                }
             }
         },
         "Maszyny przemysłowe": {
@@ -171,7 +189,11 @@ def sektor_przemysl():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa od 1925 roku, jeden z największych na świecie producentów maszyn budowlanych i górniczych"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Spółki produkujące maszyny przemysłowe są cykliczne - ich P/E bywa niskie w szczycie cyklu koniunkturalnego (bo zyski są wysokie) i wysokie w dołku (bo zyski spadają), co jest odwrotnością intuicji 'niskie P/E znaczy tanio'."
+                }
             }
         },
         "Transport i logistyka": {
@@ -187,28 +209,15 @@ def sektor_przemysl():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu S&P 500",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa od 1971 roku, jedna z największych firm logistycznych na świecie"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Firmy logistyczne mają zwykle niższe marże niż inne branże, więc ich P/E bywa niższe niż średnia rynkowa. EV/EBITDA jest tu przydatny, bo branża wymaga dużych nakładów na flotę i infrastrukturę."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Przemysł:")
-    for branza in dane_przemysl:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_przemysl.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_przemysl, "Przemysł")
 
 
 def sektor_dobra_uznaniowe():
@@ -226,7 +235,11 @@ def sektor_dobra_uznaniowe():
                     "Notowana przede wszystkim na Tokijskiej Giełdzie Papierów Wartościowych, a jej akcje depozytowe (ADR) są notowane na NYSE od 1999 roku",
                     "Jako zagraniczny emitent podlega również amerykańskim wymogom sprawozdawczym wobec SEC",
                     "Działa od 1937 roku i jest jednym z największych na świecie producentów samochodów pod względem liczby sprzedawanych pojazdów"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Producenci samochodów są notowani zwykle z niskim P/E mimo dużej skali, bo rynek postrzega tę branżę jako nisko-marżową i kapitałochłonną. Warto porównywać producentów tradycyjnych z producentami pojazdów elektrycznych osobno, bo rynek wycenia ich zupełnie inaczej."
+                }
             }
         },
         "Odzież i luksus": {
@@ -242,7 +255,11 @@ def sektor_dobra_uznaniowe():
                     "Notowana na giełdzie Euronext Paris i wchodzi w skład indeksu CAC 40",
                     "Publikuje sprawozdania finansowe zgodnie z europejskimi standardami rachunkowości (IFRS)",
                     "Największy na świecie koncern dóbr luksusowych, powstały w 1987 roku z połączenia Louis Vuitton i Moët Hennessy"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Marki luksusowe notowane są zwykle z wysokim P/E, bo inwestorzy płacą premium za siłę marki i wysokie marże. Spadek sprzedaży w tej branży często mocno obniża wycenę, bo rynek wycenia tu też prestiż, nie tylko bieżące zyski."
+                }
             }
         },
         "Hotele i rozrywka": {
@@ -258,28 +275,15 @@ def sektor_dobra_uznaniowe():
                     "Notowana na giełdzie Nasdaq",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa od 1927 roku i jest największą na świecie siecią hotelową pod względem liczby pokoi"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Branża hotelowa jest wrażliwa na cykl koniunkturalny i wydarzenia globalne, więc jej wycena potrafi się gwałtownie zmieniać. Wielu operatorów nie posiada samych budynków (tylko zarządza marką), co warto sprawdzić, bo zmienia to sensowność wskaźnika P/B."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Dobra konsumpcyjne uznaniowe:")
-    for branza in dane_dobra_uznaniowe:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_dobra_uznaniowe.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_dobra_uznaniowe, "Dobra konsumpcyjne uznaniowe")
 
 
 def sektor_dobra_podstawowe():
@@ -297,7 +301,11 @@ def sektor_dobra_podstawowe():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa nieprzerwanie od 1892 roku i jest jedną z najbardziej rozpoznawalnych marek na świecie"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Firmy z dóbr podstawowych są notowane zwykle z umiarkowanym, stabilnym P/E i solidną dywidendą - inwestorzy cenią sobie przewidywalność popytu, nawet kosztem niższego tempa wzrostu niż w innych branżach."
+                }
             }
         },
         "Handel detaliczny": {
@@ -313,7 +321,11 @@ def sektor_dobra_podstawowe():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa od 1962 roku i jest największą na świecie siecią handlu detalicznego pod względem przychodów"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Handel detaliczny działa na niskich marżach, więc kluczowa jest tu rotacja towaru. P/E bywa umiarkowane, ale warto też patrzeć na przychody na metr kwadratowy sklepu jako uzupełniający wskaźnik."
+                }
             }
         },
         "Higiena i kosmetyki": {
@@ -329,28 +341,15 @@ def sektor_dobra_podstawowe():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa nieprzerwanie od 1837 roku, właściciel wielu globalnych marek (Gillette, Pampers, Head & Shoulders)"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Podobnie jak żywność i napoje, ta branża ceniona jest za stabilność - umiarkowane P/E, regularna dywidenda, niska wrażliwość na wahania koniunktury."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Dobra konsumpcyjne podstawowe:")
-    for branza in dane_dobra_podstawowe:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_dobra_podstawowe.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_dobra_podstawowe, "Dobra konsumpcyjne podstawowe")
 
 
 def sektor_zdrowie():
@@ -368,7 +367,11 @@ def sektor_zdrowie():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do SEC i podlega nadzorowi amerykańskiej agencji leków (FDA)",
                     "Działa nieprzerwanie od 1849 roku, jeden z największych koncernów farmaceutycznych na świecie"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Wycena firm farmaceutycznych mocno zależy od portfela patentów - zbliżająca się utrata ochrony patentowej na kluczowy lek ('patent cliff') może obniżyć wycenę, nawet jeśli bieżące zyski są wysokie."
+                }
             }
         },
         "Biotechnologia": {
@@ -384,7 +387,11 @@ def sektor_zdrowie():
                     "Notowana na giełdzie Nasdaq",
                     "Regularnie składa raporty do SEC i podlega nadzorowi amerykańskiej agencji leków (FDA)",
                     "Jedna z pierwszych na świecie firm, które wprowadziły technologię mRNA do masowej produkcji szczepionek"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Wiele spółek biotechnologicznych nie generuje jeszcze zysku, więc klasyczne P/E nie ma tu zastosowania - inwestorzy wyceniają je na podstawie potencjału portfela leków w fazach badań klinicznych, co jest z natury spekulacyjne."
+                }
             }
         },
         "Ubezpieczenia zdrowotne": {
@@ -400,28 +407,15 @@ def sektor_zdrowie():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Największy na świecie ubezpieczyciel zdrowotny pod względem przychodów"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Ubezpieczyciele zdrowotni wyceniani są często przez P/B, bo kluczowa jest tu jakość i wielkość portfela aktywów oraz rezerw na przyszłe wypłaty świadczeń, nie tylko bieżący zysk."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Ochrona zdrowia:")
-    for branza in dane_zdrowie:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_zdrowie.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_zdrowie, "Ochrona zdrowia")
 
 
 def sektor_finanse():
@@ -439,7 +433,11 @@ def sektor_finanse():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC) i podlega nadzorowi Rezerwy Federalnej",
                     "Największy bank w USA pod względem wartości aktywów"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Banki wycenia się głównie przez P/B, nie P/E - dla instytucji finansowej wartość księgowa (kapitał własny) jest kluczowa, bo to ona zabezpiecza zdolność do udzielania kredytów i wchłaniania strat."
+                }
             }
         },
         "Ubezpieczenia": {
@@ -455,7 +453,11 @@ def sektor_finanse():
                     "Notowana na giełdzie we Frankfurcie i wchodzi w skład niemieckiego indeksu DAX",
                     "Podlega niemieckiemu i europejskiemu nadzorowi finansowemu",
                     "Jeden z największych ubezpieczycieli na świecie, działający od 1890 roku"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Podobnie jak banki, ubezpieczyciele często wyceniani są przez P/B - liczy się wielkość i jakość portfela inwestycyjnego, z którego pokrywane są przyszłe odszkodowania."
+                }
             }
         },
         "Zarządzanie inwestycjami": {
@@ -471,28 +473,15 @@ def sektor_finanse():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Największa na świecie firma zarządzająca aktywami pod względem wartości aktywów pod zarządzaniem (AUM)"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Firmy zarządzające aktywami wyceniane są zwykle przez pryzmat wartości aktywów pod zarządzaniem (AUM) i tempa jej wzrostu, bo od tego bezpośrednio zależą przychody z opłat za zarządzanie."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Finanse:")
-    for branza in dane_finanse:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_finanse.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_finanse, "Finanse")
 
 
 def sektor_technologia():
@@ -510,7 +499,11 @@ def sektor_technologia():
                     "Notowana na giełdzie Nasdaq i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa nieprzerwanie od 1975 roku i jest jedną z najbardziej wartościowych spółek na świecie"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Spółki software'owe notowane są zwykle z wysokim P/E, bo mają wysokie marże i przewidywalne przychody z subskrypcji. Rynek często patrzy też na tempo wzrostu przychodów bardziej niż na sam bieżący zysk."
+                }
             }
         },
         "Półprzewodniki": {
@@ -526,7 +519,11 @@ def sektor_technologia():
                     "Notowana na giełdzie Nasdaq",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Lider światowego rynku układów graficznych oraz sprzętu do sztucznej inteligencji"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Branża półprzewodnikowa jest cykliczna i silnie zależna od popytu na konkretne technologie (np. AI) - P/E potrafi być bardzo wysokie w okresach entuzjazmu rynku, co niesie ryzyko gwałtownej korekty wyceny."
+                }
             }
         },
         "Sprzęt komputerowy": {
@@ -542,7 +539,11 @@ def sektor_technologia():
                     "Notowana na giełdzie Nasdaq i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa nieprzerwanie od 1976 roku i jest jedną z najbardziej wartościowych spółek na świecie"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Producenci sprzętu wyceniani są zwykle niżej niż firmy software'owe, mimo dużej skali, bo sprzedaż fizycznych urządzeń ma niższe marże i jest bardziej cykliczna niż przychody z subskrypcji."
+                }
             }
         },
         "Usługi IT": {
@@ -558,28 +559,15 @@ def sektor_technologia():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Jedna z największych na świecie firm doradczo-technologicznych, obecna w ponad 120 krajach"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Firmy doradczo-technologiczne mają zwykle umiarkowane, stabilne P/E, bo ich przychody oparte są na długoterminowych kontraktach, co ogranicza zarówno ryzyko, jak i tempo wzrostu w porównaniu z producentami oprogramowania."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Technologia:")
-    for branza in dane_technologia:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_technologia.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_technologia, "Technologia")
 
 
 def sektor_komunikacja():
@@ -597,7 +585,11 @@ def sektor_komunikacja():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Jeden z największych operatorów telekomunikacyjnych w USA"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Operatorzy telekomunikacyjni notowani są zwykle z niskim P/E i wysoką dywidendą - branża wymaga ogromnych nakładów na infrastrukturę, ale generuje bardzo stabilne, powtarzalne przychody z abonamentów."
+                }
             }
         },
         "Media i rozrywka": {
@@ -613,7 +605,11 @@ def sektor_komunikacja():
                     "Notowana na giełdzie nowojorskiej (NYSE) i wchodzi w skład indeksu Dow Jones Industrial Average",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Działa nieprzerwanie od 1923 roku i jest jednym z najbardziej rozpoznawalnych koncernów medialnych na świecie"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Wycena firm medialnych coraz częściej zależy od liczby subskrybentów platform streamingowych, a nie tylko od tradycyjnych wskaźników zysku - inwestorzy traktują wzrost bazy abonentów podobnie jak w branży software'owej."
+                }
             }
         },
         "Platformy internetowe": {
@@ -629,28 +625,15 @@ def sektor_komunikacja():
                     "Notowana na giełdzie Nasdaq",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Właściciel największej na świecie wyszukiwarki internetowej, działający od 1998 roku (jako Google, od 2015 roku pod nazwą Alphabet)"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Platformy internetowe finansowane z reklam wyceniane są zwykle z wysokim P/E, bo mają bardzo wysokie marże po osiągnięciu skali - koszt obsługi dodatkowego użytkownika jest niewielki."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Komunikacja:")
-    for branza in dane_komunikacja:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_komunikacja.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_komunikacja, "Komunikacja")
 
 
 def sektor_uslugi_komunalne():
@@ -668,7 +651,11 @@ def sektor_uslugi_komunalne():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Największy na świecie producent energii wiatrowej i słonecznej wśród firm użyteczności publicznej"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Spółki użyteczności publicznej wyceniane są zwykle nisko pod względem P/E, ale cenione za bardzo stabilną, przewidywalną dywidendę - to sektor typowo defensywny, mało wrażliwy na cykl koniunkturalny."
+                }
             }
         },
         "Gazownictwo": {
@@ -684,7 +671,11 @@ def sektor_uslugi_komunalne():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Jedna z największych firm energetycznych w USA, obsługująca miliony klientów w Kalifornii i Teksasie"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Podobnie jak dostawcy prądu, spółki gazownicze wyceniane są głównie przez pryzmat stabilności dywidendy, a nie potencjału wzrostu - ich przychody są silnie regulowane przez państwo."
+                }
             }
         },
         "Wodociągi": {
@@ -700,28 +691,15 @@ def sektor_uslugi_komunalne():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Największa notowana publicznie firma wodociągowa w USA, obsługująca miliony klientów"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Firmy wodociągowe to jeden z najbardziej defensywnych segmentów rynku - bardzo stabilny popyt przekłada się na wysokie jak na sektor komunalny wyceny oraz regularne dywidendy."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Usługi komunalne:")
-    for branza in dane_uslugi_komunalne:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_uslugi_komunalne.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_uslugi_komunalne, "Usługi komunalne")
 
 
 def sektor_nieruchomosci():
@@ -739,7 +717,11 @@ def sektor_nieruchomosci():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Jeden z największych deweloperów mieszkaniowych w USA, działający od 1954 roku"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "EV/EBITDA", "Stopa dywidendy"],
+                    "kontekst": "Deweloperzy mieszkaniowi są silnie cykliczni i wrażliwi na stopy procentowe - ich P/E bywa niskie w szczycie cyklu budowlanego, co może mylnie sugerować okazję inwestycyjną tuż przed spowolnieniem."
+                }
             }
         },
         "Nieruchomości komercyjne": {
@@ -755,7 +737,11 @@ def sektor_nieruchomosci():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Największy w USA właściciel centrów handlowych, działający jako fundusz inwestycyjny typu REIT"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "Stopa dywidendy", "FFO (funds from operations)"],
+                    "kontekst": "Fundusze nieruchomości komercyjnych (REIT) wyceniane są zwykle przez pryzmat stopy dywidendy i wartości portfela nieruchomości (P/B), a nie klasycznego P/E, bo z definicji wypłacają większość zysku inwestorom."
+                }
             }
         },
         "Fundusze REIT": {
@@ -771,28 +757,15 @@ def sektor_nieruchomosci():
                     "Notowana na giełdzie nowojorskiej (NYSE)",
                     "Regularnie składa raporty do amerykańskiego nadzoru finansowego (SEC)",
                     "Największy na świecie właściciel magazynów i centrów logistycznych, działający jako fundusz inwestycyjny typu REIT"
-                ]
+                ],
+                "wycena": {
+                    "wskazniki": ["P/E (cena/zysk)", "P/B (cena/wartość księgowa)", "Stopa dywidendy", "FFO (funds from operations)"],
+                    "kontekst": "Podobnie jak inne REIT-y, fundusze magazynowe wyceniane są głównie przez stopę dywidendy i wskaźnik FFO zamiast klasycznego zysku netto, bo amortyzacja nieruchomości zaburza standardowy rachunek zysków."
+                }
             }
         }
     }
-
-    print("\nBranże w sektorze Nieruchomości:")
-    for branza in dane_nieruchomosci:
-        print(f"- {branza}")
-    print()
-
-    for branza, info in dane_nieruchomosci.items():
-        print(f"Jak zarabia branża {branza}:")
-        print(f"{info['jak_zarabia']}\n")
-        print(f"Czynniki wpływające na zyski w branży {branza}:")
-        for czynnik in info['czynniki']:
-            print(f"- {czynnik}")
-        print()
-        print(f"Przykładowa spółka w branży {branza}: {info['spolka_przykladowa']['nazwa']}")
-        print("Czynniki wiarygodności tej spółki:")
-        for punkt in info['spolka_przykladowa']['wiarygodnosc']:
-            print(f"- {punkt}")
-        print()
+    wyswietl_sektor(dane_nieruchomosci, "Nieruchomości")
 
 
 sektory = {
